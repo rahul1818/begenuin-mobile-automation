@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Begenuin Automation Scenarios" verbose="1" parallel="tests" thread-count="1">
+
+    <!--Web Testsuits -->
+
+    <test name="Verify Dashboard Test">
+        <classes>
+            <class name="Tests.WebTest.DashBoardTest"/>
+        </classes>
+    </test>
+
+<!--    <test name="verify Manage Test">-->
+<!--        <classes>-->
+<!--            <class name="Tests.WebTest.ManageTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Verify Embed Test">-->
+<!--        <classes>-->
+<!--            <class name="Tests.WebTest.EmbedTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Verify White label setting test">-->
+<!--        <classes>-->
+<!--            <class name="Tests.WebTest.WhitelabelSettingTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Verify frontend test">-->
+<!--        <classes>-->
+<!--            <class name="Tests.WebFrontEndTest.FEhomeTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Verify All API">-->
+<!--        <classes>-->
+<!--            <class name="Tests.ApiTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Verify Mobile Test">-->
+<!--        <classes>-->
+<!--            <class name="Tests.MobileTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+</suite>
+        <!-- mvn clean test -DsuiteXmlFile=tesSuite.xml-->
+
+
+<!--</suite>-->

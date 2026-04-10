@@ -1,0 +1,1183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Begenuin Automation Scenarios" verbose="1" parallel="tests" thread-count="1">
+
+    <!--Web Testsuits -->
+
+    <test name="Verify all brand elements are present">
+        <classes>
+            <class name="Tests.WebTest.DashBoardTest">
+                <methods>
+                    <include name="AllBrandElementsPresent"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify character limit on mission">
+        <classes>
+            <class name="Tests.WebTest.DashBoardTest">
+                <methods>
+                    <include name="verifyCharacterLimitOnMission"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify character limit on vision">
+        <classes>
+            <class name="Tests.WebTest.DashBoardTest">
+                <methods>
+                    <include name="verifyCharacterLimitOnVision"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify character limit on policies">
+        <classes>
+            <class name="Tests.WebTest.DashBoardTest">
+                <methods>
+                    <include name="verifyCharacterLimitOnPolicies"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify character limit on working conditions">
+        <classes>
+            <class name="Tests.WebTest.DashBoardTest">
+                <methods>
+                    <include name="verifyCharacterLimitOnWorkingConditions"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify character limit of conduct">
+        <classes>
+            <class name="Tests.WebTest.DashBoardTest">
+                <methods>
+                    <include name="verifyCharacterLimitOfConduct"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify character limit of do-as">
+        <classes>
+            <class name="Tests.WebTest.DashBoardTest">
+                <methods>
+                    <include name="verifyCharacterLimitOfDoAs"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify character limit of don't-as">
+        <classes>
+            <class name="Tests.WebTest.DashBoardTest">
+                <methods>
+                    <include name="verifyCharacterLimitOfDontAs"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify retail network functionality">
+        <classes>
+            <class name="Tests.WebTest.DashBoardTest">
+                <methods>
+                    <include name="verifyRetailNetworkFunctionality"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify consumer brand functionality">
+        <classes>
+            <class name="Tests.WebTest.DashBoardTest">
+                <methods>
+                    <include name="verifyConsumerBrandFunctionality"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify functionality of retail network traffic range under 1M">
+        <classes>
+            <class name="Tests.WebTest.DashBoardTest">
+                <methods>
+                    <include name="verifyFunctionalityOfRetailNetworkTrafficRangeSectionUnder1M"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify functionality of retail network traffic range selection 1M-5M">
+        <classes>
+            <class name="Tests.WebTest.DashBoardTest">
+                <methods>
+                    <include name="verifyTheFunctionalityOfRetailNetworkTrafficRangeSelection1M_5M"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify functionality of retail network traffic range selection 5M-10M">
+        <classes>
+            <class name="Tests.WebTest.DashBoardTest">
+                <methods>
+                    <include name="verifyTheFunctionalityOfretailNetworkTrafficrangeSelection5M_10m"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify functionality of retail network traffic range selection more than 10M">
+        <classes>
+            <class name="Tests.WebTest.DashBoardTest">
+                <methods>
+                    <include name="verifyTheFunctionalityOfRetailNetworkTrafficRangeSelectionMoreThan10M"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify redirection to the next section">
+        <classes>
+            <class name="Tests.WebTest.DashBoardTest">
+                <methods>
+                    <include name="nextSectionRedirection"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify consumer brand addition">
+        <classes>
+            <class name="Tests.WebTest.DashBoardTest">
+                <methods>
+                    <include name="addConsumerBrandVerification"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify term sheet elements">
+        <classes>
+            <class name="Tests.WebTest.DashBoardTest">
+                <methods>
+                    <include name="verifyTermSheetElement"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify add person for review functionality">
+        <classes>
+            <class name="Tests.WebTest.DashBoardTest">
+                <methods>
+                    <include name="verifyAddPersonForReview"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify add person for notice functionality">
+        <classes>
+            <class name="Tests.WebTest.DashBoardTest">
+                <methods>
+                    <include name="verifyAddPersonForNotice"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify add person functionality for legal review">
+        <classes>
+            <class name="Tests.WebTest.DashBoardTest">
+                <methods>
+                    <include name="verifyAddPersonFunctionalityForLegalReview"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify notice team section">
+        <classes>
+            <class name="Tests.WebTest.DashBoardTest">
+                <methods>
+                    <include name="VerifyNoticeTeamSection"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify contact name">
+        <classes>
+            <class name="Tests.WebTest.DashBoardTest">
+                <methods>
+                    <include name="VerifyContactName"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify contact email">
+        <classes>
+            <class name="Tests.WebTest.DashBoardTest">
+                <methods>
+                    <include name="VerifyContactEmail"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+<!-- Manage page testsuits-->
+
+
+    <test name="Update Community">
+        <classes>
+            <class name="Tests.WebTest.ManageTest">
+                <methods>
+                    <include name="updateCommunity"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify MangePage">
+        <classes>
+            <class name="Tests.WebTest.ManageTest">
+                <methods>
+                    <include name="verifyMangePage"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Create New Community">
+    <classes>
+        <class name="Tests.WebTest.ManageTest">
+            <methods>
+                <include name="createNewCommunity"></include>
+            </methods>
+        </class>
+    </classes>
+    </test>
+    <test name="Verify Community Details">
+        <classes>
+            <class name="Tests.WebTest.ManageTest">
+                <methods>
+                    <include name="verifyCommunityDetails"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Verify Users Test">
+        <classes>
+            <class name="Tests.WebTest.ManageTest">
+                <methods>
+                    <include name="verifyUsersTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Verify All Users Page Test">
+        <classes>
+            <class name="Tests.WebTest.ManageTest">
+                <methods>
+                    <include name="verifyAllUsersPageTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Column Details Test">
+        <classes>
+            <class name="Tests.WebTest.ManageTest">
+                <methods>
+                    <include name="columnDetailsTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Verify View Share Functionality">
+        <classes>
+            <class name="Tests.WebTest.ManageTest">
+                <methods>
+                    <include name="verifyViewShareFunctionality"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!--         Embed test Testsuits-->
+
+        <test name="Verify Embed Page">
+            <classes>
+                <class name="Tests.WebTest.EmbedTest">
+                    <methods>
+                        <include name="verifyEmbedPage"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+    <!--         WhitelabelSetting Testsuits-->
+        <test name="Verify White Label Setting">
+            <classes>
+                <class name="Tests.WebTest.WhitelabelSettingTest">
+                    <methods>
+                        <include name="verifyWhiteLabelSetting"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+
+        <test name="Verify White Label Setting URL">
+            <classes>
+                <class name="Tests.WebTest.WhitelabelSettingTest">
+                    <methods>
+                        <include name="verifyWhiteLabelSettingURL"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="verify White Label Setting URL For QA Environment">
+            <classes>
+                <class name="Tests.WebTest.WhitelabelSettingTest">
+                    <methods>
+                        <include name="verifyWhiteLabelSettingURLForQAEnvironment"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="Verify White Label Setting With Live Environment">
+            <classes>
+                <class name="Tests.WebTest.WhitelabelSettingTest">
+                    <methods>
+                        <include name="verifyWhiteLabelSettingWithLiveEnvironment"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+
+
+
+
+
+
+
+
+
+    <!--         Mobile Testsuits-->
+
+<!--            <test name="Verify Login Scenario">-->
+<!--                <classes>-->
+<!--                    <class name="Tests.MobileTest">-->
+<!--                        <methods>-->
+<!--                            <include name="verifyLoginPageElement"></include>-->
+<!--                        </methods>-->
+<!--                    </class>-->
+<!--                </classes>-->
+<!--            </test>-->
+
+<!--                <test name="Verify Welcome Page Scenario">-->
+<!--                    <classes>-->
+<!--                        <class name="Tests.MobileTest">-->
+<!--                            <methods>-->
+<!--                                <include name="verifyWelcomePageInstruction"></include>-->
+<!--                            </methods>-->
+<!--                        </class>-->
+<!--                    </classes>-->
+<!--                </test>-->
+
+<!--            <test name="Verify Login with phone Number">-->
+<!--                <classes>-->
+<!--                    <class name="Tests.MobileTest">-->
+<!--                        <methods>-->
+<!--                            <include name="verify_LoginScenariosWithNumber"></include>-->
+<!--                        </methods>-->
+<!--                    </class>-->
+<!--                </classes>-->
+<!--            </test>-->
+<!--            <test name="Verify LogIn with Email">-->
+<!--                <classes>-->
+<!--                    <class name="Tests.MobileTest">-->
+<!--                        <methods>-->
+<!--                            <include name="verifyLoginScenarioWithEmail"></include>-->
+<!--                        </methods>-->
+<!--                    </class>-->
+<!--                </classes>-->
+<!--            </test>-->
+<!--            <test name="verify Icon present on Home Screen">-->
+<!--                <classes>-->
+<!--                    <class name="Tests.MobileTest">-->
+<!--                        <methods>-->
+<!--                            <include name="verifyIconPresentOnHomeScreen"></include>-->
+<!--                        </methods>-->
+<!--                    </class>-->
+<!--                </classes>-->
+<!--            </test>-->
+<!--            <test name="verify Create Community with Sign up">-->
+<!--                <classes>-->
+<!--                    <class name="Tests.MobileTest">-->
+<!--                        <methods>-->
+<!--                            <include name="verifySignUpScenario"></include>-->
+<!--                        </methods>-->
+<!--                    </class>-->
+<!--                </classes>-->
+<!--            </test>-->
+<!--            <test name="verify Create Community with LogIn">-->
+<!--                <classes>-->
+<!--                    <class name="Tests.MobileTest">-->
+<!--                        <methods>-->
+<!--                            <include name="verifyCommunityCreateWithLoginScenario"></include>-->
+<!--                        </methods>-->
+<!--                    </class>-->
+<!--                </classes>-->
+<!--            </test>-->
+<!--            <test name="verify Create Community Automatically with LogIn">-->
+<!--                <classes>-->
+<!--                    <class name="Tests.MobileTest">-->
+<!--                        <methods>-->
+<!--                            <include name="verifyCreateAutoCommunityScenario"></include>-->
+<!--                        </methods>-->
+<!--                    </class>-->
+<!--                </classes>-->
+<!--            </test>-->
+<!--        <test name="verify Create Loop with LogIn">-->
+<!--            <classes>-->
+<!--                <class name="Tests.MobileTest">-->
+<!--                    <methods>-->
+<!--                        <include name="verifyCreateLoopScenario"></include>-->
+<!--                    </methods>-->
+<!--                </class>-->
+<!--            </classes>-->
+<!--        </test>-->
+<!--            <test name="verify Auto Create Loop with LogIn">-->
+<!--                <classes>-->
+<!--                    <class name="Tests.MobileTest">-->
+<!--                        <methods>-->
+<!--                            <include name="verifyCreateAutoLoopScenario"></include>-->
+<!--                        </methods>-->
+<!--                    </class>-->
+<!--                </classes>-->
+<!--            </test>-->
+<!--            <test name="verify Create Avatar">-->
+<!--                <classes>-->
+<!--                    <class name="Tests.MobileTest">-->
+<!--                        <methods>-->
+<!--                            <include name="verifyCreateAvatarScenario"></include>-->
+<!--                        </methods>-->
+<!--                    </class>-->
+<!--                </classes>-->
+<!--            </test>-->
+
+
+    <!--     API Test Suit-->
+
+        <test name="Verify API Test">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiLoginTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiDemoBrandProfileTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiDemoBrandProfileTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="apiDemoBrandRagistrationTest">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiDemoBrandRagistrationTest"></include>
+                </methods>
+            </class>
+        </classes>
+        </test>
+        <test name="ApiDemoBrandRagistrationEmailValidationTest">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiDemoBrandRagistrationEmailValidationTest"></include>
+                </methods>
+            </class>
+        </classes>
+        </test>
+        <test name="ApiDemoResetPasswordTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiDemoResetPasswordTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiDemoBrandInvitationTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiDemoBrandInvitationTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiCommunityGuidelineTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiCommunityGuidelineTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiCommunityMemberTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiCommunityMemberTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiLoopTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiLoopTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="Api By User Test">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiByUserTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiBrandSearchTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiBrandSearchTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiCommunityTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiCommunityTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiCommunityHandleSuggestionTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiCommunityHandleSuggestionTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+
+        <test name="ApiCommunityRequestTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiCommunityRequestsTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+
+        <test name="ApiLoopPaginationTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiLoopPaginationTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiLoopSubscriberTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiLoopSubscribersTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiLoopCollaboratorsTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiLoopCollaboratorsTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiLoopPostsTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiLoopPostsTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiCommunityLoopTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiCommunityLoopTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiCheckUserExistsTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiCheckUserExistsTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiMentionsTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiMentionsTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiFontsTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiFontsTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiGetSignURLTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiGetSignURLTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiGetSBrandUserTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiGetSBrandUserTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiSubdomainSuggestionTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiSubdomainSuggestionTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiBrandDetailsTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiBrandDetailsTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiResendEmailTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiResendEmailTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiGetDynamicCBRandDataTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiGetDynamicCBRandDataTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiNickNameSuggestionTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiNickNameSuggestionTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiValidateHandleTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiValidateHandleTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiGetCommentTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiGetCommentTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiGetPaymentsMethodTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiGetPaymentsMethodTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiTransictionTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiTransictionTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="ApiGetWalletBalanceTest">
+            <classes>
+                <class name="Tests.ApiTest">
+                    <methods>
+                        <include name="apiGetWalletBalanceTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+    <test name="Verify API Login Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiLoginNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Demo Brand Profile Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiDemoBrandProfileNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Verify API Demo Brand Registration Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiDemoBrandRegistrationNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Demo Brand Registration Email Validation Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiDemoBrandRegistrationEmailValidationNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Demo Reset Password Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiDemoResetPasswordNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Demo Brand Invitation Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiDemoBrandInvitationNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Community Guideline Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiCommunityGuidelineNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Community Member Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiCommunityMemberNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Loop Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiLoopNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API By User Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiByUserNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Brand Search Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiBrandSearchNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Community Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiCommunityNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Community Handle Suggestion Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiCommunityHandleSuggestionNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Community Requests Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiCommunityRequestsNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Loop Pagination Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiLoopPaginationNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Loop Subscribers Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiLoopSubscribersNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Loop Collaborators Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiLoopCollaboratorsNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Loop Posts Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiLoopPostsNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Community Loop Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiCommunityLoopNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Check User Exists Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiCheckUserExistsNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Mentions Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiMentionsNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Fonts Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiFontsNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Get Sign URL Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiGetSignURLNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Get S Brand User Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiGetSBrandUserNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Subdomain Suggestion Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiSubdomainSuggestionNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Brand Details Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiBrandDetailsNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Resend Email Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiResendEmailNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Get Dynamic C Brand Data Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiGetDynamicCBRandDataNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Nick Name Suggestion Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiNickNameSuggestionNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Validate Handle Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiValidateHandleNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Get Comment Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiGetCommentNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Get Payments Method Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiGetPaymentsMethodNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Transaction Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiTransactionNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify API Get Wallet Balance Negative Test">
+        <classes>
+            <class name="Tests.ApiTest">
+                <methods>
+                    <include name="apiGetWalletBalanceNegativeTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify Frontend App and popular clickable">
+        <classes>
+            <class name="Tests.WebFrontEndTest.FEhomeTest">
+                <methods>
+                    <include name="verifyPopular"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Verify Frontend App and Header is visible">
+        <classes>
+            <class name="Tests.WebFrontEndTest.FEhomeTest">
+                <methods>
+                    <include name="verifyHeader"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Download Button is Clickable and popup is visible">
+        <classes>
+            <class name="Tests.WebFrontEndTest.FEhomeTest">
+                <methods>
+                    <include name="verifyDownloadPopup"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="LOGIN/SIGNUP in frontend">
+        <classes>
+            <class name="Tests.WebFrontEndTest.FEhomeTest">
+                <methods>
+                    <include name="loginOrSignup"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Home Feed with 5 video">
+        <classes>
+            <class name="Tests.WebFrontEndTest.FEhomeTest">
+                <methods>
+                    <include name="homeFeedWith5Video"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+</suite>
+        <!-- mvn clean test -DsuiteXmlFile=tesSuite.xml-->
+
+
+<!--</suite>-->
