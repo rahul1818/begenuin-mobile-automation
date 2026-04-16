@@ -51,7 +51,10 @@ Artifacts are published to this repository’s [GitHub Packages](https://github.
 
 **From GitHub Actions:** open **Actions → Publish to GitHub Packages → Run workflow**, or push a version tag matching `v*` (for example `v1.0.0`). The workflow runs `mvn -B deploy -DskipTests` with `GITHUB_TOKEN`.
 
-**From your machine:** create a [classic PAT](https://github.com/settings/tokens) with `write:packages` (and `read:packages` if needed). In `~/.m2/settings.xml`:
+**From your machine:** GitHub Packages does **not** accept your GitHub account password. You must use a **Personal Access Token** in `~/.m2/settings.xml`.
+
+1. Create a [classic PAT](https://github.com/settings/tokens) for the GitHub user that is allowed to publish to **`rahul1818/begenuin-mobile-automation`** (the repo owner or a collaborator with write access). Enable scopes **`write:packages`** and **`read:packages`**. If the repository is private, also enable **`repo`**. If your org uses SAML SSO, **authorize** the token for the org after creating it.
+2. Put the token in `~/.m2/settings.xml`. The **`<id>` must be exactly `github`**, matching `distributionManagement` in `pom.xml`:
 
 ```xml
 <settings>
@@ -59,17 +62,21 @@ Artifacts are published to this repository’s [GitHub Packages](https://github.
     <server>
       <id>github</id>
       <username>YOUR_GITHUB_USERNAME</username>
-      <password>YOUR_PAT</password>
+      <password>ghp_xxxxxxxxxxxx</password>
     </server>
   </servers>
 </settings>
 ```
+
+Use your real GitHub login for `<username>`. For `<password>`, paste the PAT only (often starts with `ghp_`). Do not commit this file.
 
 Then run:
 
 ```bash
 mvn -B deploy -DskipTests
 ```
+
+**If deploy fails with `401 Unauthorized`:** the token is missing, expired, or lacks **`write:packages`**, or the `<id>` is not `github`. Another common mistake is using a PAT for user **A** while publishing to a registry URL under **`rahul1818/...`** without **A** having push rights to that repository.
 
 Published files include the main JAR and a **`tests`** classifier JAR (`Genuin-1.0.0-tests.jar`) that contains compiled test sources.
 
