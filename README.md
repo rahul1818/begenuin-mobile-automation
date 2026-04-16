@@ -45,6 +45,34 @@ mvn clean test -Dsurefire.suiteXmlFiles=build/testSuite.xml
 
 Enable or disable tests by editing the `<test>` blocks in the chosen suite XML file.
 
+## Publish (GitHub Packages)
+
+Artifacts are published to this repository’s [GitHub Packages](https://github.com/rahul1818/begenuin-mobile-automation/packages) Maven registry (`distributionManagement` id **`github`**).
+
+**From GitHub Actions:** open **Actions → Publish to GitHub Packages → Run workflow**, or push a version tag matching `v*` (for example `v1.0.0`). The workflow runs `mvn -B deploy -DskipTests` with `GITHUB_TOKEN`.
+
+**From your machine:** create a [classic PAT](https://github.com/settings/tokens) with `write:packages` (and `read:packages` if needed). In `~/.m2/settings.xml`:
+
+```xml
+<settings>
+  <servers>
+    <server>
+      <id>github</id>
+      <username>YOUR_GITHUB_USERNAME</username>
+      <password>YOUR_PAT</password>
+    </server>
+  </servers>
+</settings>
+```
+
+Then run:
+
+```bash
+mvn -B deploy -DskipTests
+```
+
+Published files include the main JAR and a **`tests`** classifier JAR (`Genuin-1.0.0-tests.jar`) that contains compiled test sources.
+
 ## Project layout
 
 | Path | Purpose |
@@ -57,7 +85,7 @@ Enable or disable tests by editing the `<test>` blocks in the chosen suite XML f
 
 ## CI and reporting
 
-The POM includes optional integrations (e.g. Allure, external report plugins). Update any machine-specific paths or keys in `pom.xml` before running in CI or on a new workstation.
+The POM includes optional integrations (e.g. Allure). The **testreport.io** upload (`qa-parse-maven-plugin`) is **not** bound to the default lifecycle: run **`mvn verify -Pqa-testreport`** (or include that profile after a normal test run) so `target/surefire-reports/testng-results.xml` exists. Default **`mvn deploy`** and **`mvn package`** skip that step so packaging and GitHub Packages deploy do not fail on a missing report file.
 
 ## License
 

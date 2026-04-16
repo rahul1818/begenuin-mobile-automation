@@ -8,8 +8,22 @@
     <groupId>org.example</groupId>
     <artifactId>Genuin</artifactId>
     <version>1.0.0</version>
+    <packaging>jar</packaging>
 
     <name>BeGenuin</name>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/rahul1818/begenuin-mobile-automation</url>
+        </repository>
+        <snapshotRepository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/rahul1818/begenuin-mobile-automation</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -147,24 +161,52 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>com.decipherzone</groupId>
-                <artifactId>qa-parse-maven-plugin</artifactId>
-                <version>1.5.13</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
                 <executions>
                     <execution>
-                        <phase>integration-test</phase>
                         <goals>
-                            <goal>xmltojson</goal>
+                            <goal>test-jar</goal>
                         </goals>
-                        <configuration>
-                            <projectBaseUrl>https://app.testreport.io/qa-java-api</projectBaseUrl>
-                            <screenshotImagePath>/Users/apple/Desktop/Begenuin/target/test-output/screenshots/</screenshotImagePath>
-                            <sourceFilePath>/Users/apple/Desktop/Begenuin/target/surefire-reports/testng-results.xml</sourceFilePath>
-                            <projectAccessKey>672dda2c00b7ea5ccd5adc75672DDA2C_VINI-t6eszFaP</projectAccessKey>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>3.1.1</version>
+            </plugin>
         </plugins>
     </build>
+
+    <!-- Upload TestNG XML to testreport.io only when explicitly requested (not during deploy/package). -->
+    <profiles>
+        <profile>
+            <id>qa-testreport</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.decipherzone</groupId>
+                        <artifactId>qa-parse-maven-plugin</artifactId>
+                        <version>1.5.13</version>
+                        <executions>
+                            <execution>
+                                <phase>integration-test</phase>
+                                <goals>
+                                    <goal>xmltojson</goal>
+                                </goals>
+                                <configuration>
+                                    <projectBaseUrl>https://app.testreport.io/qa-java-api</projectBaseUrl>
+                                    <screenshotImagePath>${project.build.directory}/test-output/screenshots/</screenshotImagePath>
+                                    <sourceFilePath>${project.build.directory}/surefire-reports/testng-results.xml</sourceFilePath>
+                                    <projectAccessKey>672dda2c00b7ea5ccd5adc75672DDA2C_VINI-t6eszFaP</projectAccessKey>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
