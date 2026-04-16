@@ -1,2 +1,64 @@
-# begenuin-mobile-automation
-Appium-based mobile automation framework for Android and iOS. Supports end-to-end testing, reusable components, and scalable architecture. Easily integrates with CI/CD pipelines for continuous testing and faster, reliable releases.
+# BeGenuin mobile automation
+
+Appium-based mobile automation for Android and iOS, with web and API coverage. The suite uses Java, TestNG, and reusable page objects under `src/test/java`.
+
+**Release:** Maven `<version>` is **1.0.0**, matching git annotated tag **`v1.0.0`**.
+
+## Stack
+
+- **Java 8**, **Maven**
+- **TestNG** for suites (`build/testSuiteNew.xml` is the default in `pom.xml`)
+- **Appium** Java client for mobile
+- **Selenium** / **WebDriverManager** for browser tests
+- **REST Assured** for API tests
+- **Allure** for reporting (optional)
+
+## Prerequisites
+
+- JDK 8+
+- Maven 3.6+
+- For **mobile**: [Appium](https://appium.io/) server, platform tools (Android SDK and/or Xcode for iOS), and a device or emulator with your app installed
+- For **web**: Chrome (or the browser you configure)
+
+## Configuration
+
+Copy or edit `src/test/java/Config/runConfig.properties` for your environment:
+
+- **Mobile**: `platformName`, `deviceName`, `platformVersion`, `appPath`, `automationName`, `server` (Appium URL, e.g. `http://127.0.0.1:4723/wd/hub`)
+- **Web**: `browser`, `webURL`, credentials, `feURL`, frontend credentials
+
+Properties are loaded by `Config.ReadProperties`. Do not commit real credentials; use local values or secrets management in CI.
+
+## Run tests
+
+From the project root:
+
+```bash
+mvn clean test
+```
+
+The Surefire plugin uses `build/testSuiteNew.xml` by default. To use another suite:
+
+```bash
+mvn clean test -Dsurefire.suiteXmlFiles=build/testSuite.xml
+```
+
+Enable or disable tests by editing the `<test>` blocks in the chosen suite XML file.
+
+## Project layout
+
+| Path | Purpose |
+|------|---------|
+| `src/test/java/Tests/` | Test classes (mobile, web, API, frontend) |
+| `src/test/java/Pages/` | Page objects |
+| `src/test/java/Utils/` | Shared helpers (`MobileCommon`, `WebCommon`, locators, actions) |
+| `src/test/java/Config/` | `runConfig.properties`, `ReadProperties` |
+| `build/` | TestNG suite XML files |
+
+## CI and reporting
+
+The POM includes optional integrations (e.g. Allure, external report plugins). Update any machine-specific paths or keys in `pom.xml` before running in CI or on a new workstation.
+
+## License
+
+See `LICENSE` in the repository root.
